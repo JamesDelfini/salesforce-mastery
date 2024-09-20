@@ -7,6 +7,6 @@
   ],
   "name": "saleforce-mastery",
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sfdcLoginUrl": "https://mbititsolutions-dev-ed.develop.my.salesforce.com",
   "sourceApiVersion": "61.0"
 }
