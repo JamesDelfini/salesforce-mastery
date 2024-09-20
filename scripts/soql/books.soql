@@ -1,0 +1,2 @@
+SELECT CreatedById, CreatedDate, Id, IsDeleted, LastModifiedById, LastModifiedDate, Name, OwnerId, Price__c, SystemModstamp
+  FROM Book__c;
