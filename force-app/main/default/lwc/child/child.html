@@ -1,0 +1,11 @@
+<template>
+  <div>Child: {serializeObj}</div>
+
+  <div class="slds-grid slds-gutters slds-var-m-top_xxx-small">
+    <!-- TODO: BUG: Different type of button colors e.g. "slds-button_destructive" won't apply the correct design-->
+    <lightning-button label="Update original" onclick={updateOriginal}
+      class="slds-col slds-button slds-button_full-width slds-button_text-destructive"></lightning-button>
+    <lightning-button label="Update shallow" onclick={updateShallow}
+      class="slds-col slds-button slds-button_full-width"></lightning-button>
+  </div>
+</template>
