@@ -7,6 +7,14 @@
         class="slds-col slds-button slds-button_full-width"></lightning-button>
 
       <c-child obj={obj} slot="footer"></c-child>
+
+      <lightning-menu-divider></lightning-menu-divider>
+
+      <div class="slds-var-m-top_x-small">
+        <c-video-player video-url={videoUrl}></c-video-player>
+        <button onclick={handlePlay}>Play</button>
+        <button class="slds-var-m-top_x-small slds-var-m-left_x-small" onclick={handlePause}>Pause</button>
+      </div>
     </div>
   </lightning-card>
 </template>
