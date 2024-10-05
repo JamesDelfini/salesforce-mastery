@@ -9,10 +9,14 @@ export default class Child extends LightningElement {
 
   updateOriginal() {
     this.obj.msg += "!!!"; // throws an invalid mutation error
+
+    console.log("[CHILD]: Update Original");
   }
 
   updateShallow() {
     // eslint-disable-next-line @lwc/lwc/no-api-reassignments
     this.obj = { ...this.obj, msg: "Hello New World!" };
+
+    console.log("[CHILD]: Update Shallow");
   }
 }

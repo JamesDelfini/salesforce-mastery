@@ -2,9 +2,11 @@
   <lightning-card title="Composition Components">
     <div class="slds-var-p-horizontal_small">
       <div>Parent: {serializeObj}</div>
-      <c-child obj={obj}></c-child>
-    </div>
 
-    <!-- <p slot="footer">Card Footer</p> -->
+      <lightning-button label="Update shallow" onclick={updateShallow}
+        class="slds-col slds-button slds-button_full-width"></lightning-button>
+
+      <c-child obj={obj} slot="footer"></c-child>
+    </div>
   </lightning-card>
 </template>
