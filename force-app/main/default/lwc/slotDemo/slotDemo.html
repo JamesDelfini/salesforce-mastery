@@ -1,0 +1,23 @@
+<template>
+  <h2 class="slds-text-heading_small slds-text-title_bold">Pass Markup into Slots</h2>
+
+  <div>
+    <p>First Name: <slot name="firstName">Default first name</slot>
+    </p>
+    <p>Last Name: <slot name="lastName">Default last name</slot>
+    </p>
+
+    <!-- Render Slots Conditionally along with Unnamed Slots -->
+    <template lwc:if={isRenderSampleSlot}>
+      <p class="slds-text-color_success">Description: <slot>Default description</slot>
+      </p>
+    </template>
+
+    <template lwc:else>
+      <p class="slds-text-color_destructive">Description: <slot>Default description</slot>
+      </p>
+    </template>
+
+    <slot name="sampleMutationSlot" onslotchange={handleSlotChange}></slot>
+  </div>
+</template>

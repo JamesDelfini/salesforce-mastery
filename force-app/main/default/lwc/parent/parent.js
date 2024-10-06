@@ -21,6 +21,9 @@ export default class Parent extends LightningElement {
     id: "myspan"
   };
 
+  sampleMutateSlot = true;
+  sampleMutateWithinSlot = "Mutate Within Slot";
+
   get serializeObj() {
     return JSON.stringify(this.obj);
   }
@@ -44,5 +47,14 @@ export default class Parent extends LightningElement {
 
   spreadClick() {
     this.childProps = { name: "Lightning Web Components" };
+  }
+
+  handleMutateSampleSlot() {
+    this.sampleMutateSlot = !this.sampleMutateSlot;
+  }
+
+  // Changes within the children of the <slot> element don’t trigger a slotchange event.
+  handleMutateSampleWithinSlot() {
+    this.sampleMutateWithinSlot += ".";
   }
 }

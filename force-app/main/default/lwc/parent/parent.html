@@ -16,6 +16,30 @@
         <button onclick={handlePlay}>Play</button>
         <button class="slds-var-m-top_x-small slds-var-m-left_x-small" onclick={handlePause}>Pause</button>
       </div>
+
+      <lightning-menu-divider></lightning-menu-divider>
+
+      <div class="slds-var-m-top_x-small">
+        <c-slot-demo>
+          <span slot="firstName">Willy</span>
+          <span slot="lastName">Wonka</span>
+          <span>Chocolatier</span>
+
+          <lightning-button label="Sample Mutate Slot" onclick={handleMutateSampleSlot}
+            class="slds-col slds-button slds-button_full-width"></lightning-button>
+
+          <template lwc:if={sampleMutateSlot}>
+            <div slot="sampleMutationSlot">
+              <p>Pariatur cupidatat adipisicing aliqua fugiat ullamco.</p>
+
+              <lightning-button label="Sample Mutate Within Slot" onclick={handleMutateSampleWithinSlot}
+                class="slds-col slds-button slds-button_full-width"></lightning-button>
+
+              <p>{sampleMutateWithinSlot}</p>
+            </div>
+          </template>
+        </c-slot-demo>
+      </div>
     </div>
   </lightning-card>
 </template>
