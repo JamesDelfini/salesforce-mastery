@@ -8,4 +8,15 @@
     <lightning-button label="Update shallow" onclick={updateShallow}
       class="slds-col slds-button slds-button_full-width"></lightning-button>
   </div>
+
+  <lightning-menu-divider></lightning-menu-divider>
+
+  <div class="slds-var-m-top_xxx-small">
+    <h2 class="slds-text-heading_small slds-text-title_bold">Spread Properties on Child Components</h2>
+    <p>Name: {name}</p>
+    <p>Country: {country}</p>
+
+    <lightning-button label="Passed Event Handler" onclick={handleOnclick}
+      class="slds-col slds-button slds-button_full-width"></lightning-button>
+  </div>
 </template>

@@ -6,7 +6,8 @@
       <lightning-button label="Update shallow" onclick={updateShallow}
         class="slds-col slds-button slds-button_full-width"></lightning-button>
 
-      <c-child obj={obj} slot="footer"></c-child>
+      <!-- lwc:spread is always applied last, so it overrides any properties that are directly declared in the template. Only one lwc:spread instance can be used on a directive. -->
+      <c-child obj={obj} lwc:spread={childProps} name="lwc" slot="footer"></c-child>
 
       <lightning-menu-divider></lightning-menu-divider>
 
