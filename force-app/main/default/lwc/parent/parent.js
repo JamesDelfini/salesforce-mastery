@@ -24,6 +24,9 @@ export default class Parent extends LightningElement {
   sampleMutateSlot = true;
   sampleMutateWithinSlot = "Mutate Within Slot";
 
+  firstName = "";
+  lastName = "";
+
   get serializeObj() {
     return JSON.stringify(this.obj);
   }
@@ -56,5 +59,26 @@ export default class Parent extends LightningElement {
   // Changes within the children of the <slot> element don’t trigger a slotchange event.
   handleMutateSampleWithinSlot() {
     this.sampleMutateWithinSlot += ".";
+  }
+
+  handleFullnameChange(event) {
+    const field = event.target.name;
+    const val = event.detail.value;
+
+    switch (field) {
+      case "firstname":
+        this.firstName = val;
+        break;
+      case "lastname":
+        this.lastName = val;
+        break;
+      default:
+        this.firstName = "";
+        this.lastName = "";
+    }
+  }
+
+  get uppercasedFullName() {
+    return `${this.firstName} ${this.lastName}`.trim().toUpperCase();
   }
 }

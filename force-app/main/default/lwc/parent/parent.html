@@ -40,6 +40,19 @@
           </template>
         </c-slot-demo>
       </div>
+
+      <div>
+        <h2 class="slds-text-heading_small slds-text-title_bold">Reactivity for Fields, Objects, and Arrays</h2>
+
+        <lightning-input type="text" name="firstname" label="Firstname" placeholder="Enter firstname"
+          class="slds-var-m-top_xxx-small" onchange={handleFullnameChange}></lightning-input>
+        <lightning-input type="text" name="lastname" label="Lastname" placeholder="Enter lastname"
+          class="slds-var-m-top_xxx-small" onchange={handleFullnameChange}></lightning-input>
+
+        <p class="slds-var-m-top_xx-small">
+          Uppercased Full Name: {uppercasedFullName}
+        </p>
+      </div>
     </div>
   </lightning-card>
 </template>
