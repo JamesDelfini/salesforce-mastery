@@ -1,6 +1,8 @@
 <template>
-  <lightning-card title="Composition Components">
+  <lightning-card>
     <div class="slds-var-p-horizontal_small">
+      <h2 class="slds-text-heading_small slds-text-title_bold">Composition Components</h2>
+
       <div>Parent: {serializeObj}</div>
 
       <lightning-button label="Update shallow" onclick={updateShallow}
@@ -40,6 +42,8 @@
           </template>
         </c-slot-demo>
       </div>
+
+      <lightning-menu-divider></lightning-menu-divider>
 
       <div>
         <h2 class="slds-text-heading_small slds-text-title_bold">Reactivity for Fields, Objects, and Arrays</h2>
